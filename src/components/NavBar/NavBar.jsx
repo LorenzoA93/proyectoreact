@@ -14,13 +14,13 @@ const NavBar = () => {
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item">
-        <a className="nav-link" >Categorias</a>
+        <a className="nav-link" >Matafuegos</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" >Categorias</a>
+        <a className="nav-link" >Indumentaria</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" >Categorias</a>
+        <a className="nav-link" >Portectores Corporales</a>
       </li>
     </ul>
   </div>
