@@ -8,12 +8,12 @@ const ItemListContainer = (prop) => {
     const [itemList, setItemList] = useState([])
 
     useEffect(() => {
-        fetch(``)
-            .then(response => response.json())
-            .then(dataJson => setItemList(dataJson))
+        fetch(`https://fakestoreapi.com/products/category/${categoryId}`)
+            .then(res => res.json())
+            .then(data => setItemList(data))
     }, [categoryId])
 
-    return (
+    return (    
         <>
             {
                 prop.greeting !== undefined ?
@@ -23,10 +23,10 @@ const ItemListContainer = (prop) => {
                         {
                             itemList?.map(item =>
                                 <li key={item.id}>
-                                    <img src={item.image} alt="" />
                                     <h3>{item.title}</h3>
+                                    <img src={item.thumbnail} alt="" />
                                     <h4>${item.price}</h4>
-                                    <Link to={`/item/${item.id}`}>VER DETALLES</Link>
+                                    <Link to={ `/item/${item.id}`}>VER DETALLES</Link>
                                 </li>
                             )
                         }
